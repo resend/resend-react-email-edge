@@ -1,0 +1,4 @@
+node_modules
+.next
+.react-email
+.DS_Store
