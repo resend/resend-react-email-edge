@@ -19,8 +19,8 @@ export default async function handler() {
     body: JSON.stringify({
       html,
       subject: 'Apple Receipt',
-      from: 'onboarding@resend.dev',
-      to: 'delivered@resend.dev',
+      from: 'Acme <onboarding@resend.dev>',
+      to: ['delivered@resend.dev'],
     }),
   });
 
