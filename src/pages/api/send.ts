@@ -2,6 +2,9 @@ import React from 'react';
 import { AppleReceiptEmail } from '../../../transactional/emails/apple-receipt';
 import { renderAsync } from '@react-email/components';
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const config = {
   runtime: 'edge',
@@ -10,21 +13,12 @@ export const config = {
 export default async function handler() {
   const html = await renderAsync(React.createElement(AppleReceiptEmail));
 
-  const data = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      html,
-      subject: 'Apple Receipt',
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
-    }),
+  const data = await resend.emails.send({
+    html,
+    subject: 'Apple Receipt',
+    from: 'Acme <onboarding@resend.dev>',
+    to: ['delivered@resend.dev'],
   });
 
-  const response = await data.json();
-
-  return NextResponse.json({ id: response.id }, { status: 200 });
+  return NextResponse.json({ id: data.id }, { status: 200 });
 }
