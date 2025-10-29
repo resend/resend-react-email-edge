@@ -4,26 +4,30 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
+    "email:build": "email build",
+    "email:dev": "email dev",
+    "format": "prettier src --write",
     "lint": "next lint",
-    "format": "prettier src --write"
+    "start": "next start"
   },
   "dependencies": {
-    "@react-email/components": "0.1.1",
+    "@react-email/components": "0.5.7",
     "next": "15.3.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "resend": "latest"
   },
   "devDependencies": {
+    "@react-email/preview-server": "4.3.2",
     "@types/node": "20.19.2",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "8.56.0",
     "eslint-config-next": "15.3.5",
     "prettier": "3.2.5",
+    "react-email": "4.3.2",
     "typescript": "5.8.3"
   }
 }
