@@ -17,11 +17,5 @@ export default async function handler() {
     to: ['delivered@resend.dev'],
   });
 
-  if (response.data) {
-    return NextResponse.json({ id: response.data.id }, { status: 200 });
-  }
-
-  if (response.error) {
-    console.error('Something went wrong during email sending', response.error);
-  }
+  return NextResponse.json(response, { status: response.error ? 500 : 200 });
 }
