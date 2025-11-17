@@ -1,5 +1,6 @@
 node_modules
 .next
 .*env
+next-env.d.ts
 .react-email
 .DS_Store
