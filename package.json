@@ -22,7 +22,7 @@
   "devDependencies": {
     "@react-email/preview-server": "4.3.2",
     "@types/node": "24.10.1",
-    "@types/react": "19.2.5",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
@@ -31,7 +31,7 @@
     "typescript": "5.8.3"
   },
   "overrides": {
-    "@types/react": "19.2.5",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3"
   }
 }
