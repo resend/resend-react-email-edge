@@ -1,0 +1,27 @@
+package.json
+  0be4475958d44179 16,29
+tsconfig.json
+  0be4475958d44179 16
+transactional/emails/apple-receipt.tsx
+  0be4475958d44179 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "f5806a22f57cc5faa363158f439de771e8d1c822",
+  "prompts": {
+    "0be4475958d44179": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e45906fa-a2d6-463a-8f05-62707e252535",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "João Melo",
+      "messages": [],
+      "total_additions": 8,
+      "total_deletions": 8,
+      "accepted_lines": 5,
+      "overriden_lines": 0
+    }
+  }
+}
