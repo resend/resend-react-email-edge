@@ -14,15 +14,13 @@ To get the most out of this guide, you’ll need to:
 1. Install dependencies:
 
 ```sh
-npm install
-# or
-yarn
+pnpm install
 ```
 
 2. Run Next.js locally:
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 3. Open URL in the browser:
